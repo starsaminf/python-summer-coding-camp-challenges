@@ -1,0 +1,27 @@
+if __name__ == '__main__':
+    N = int(input())
+    list = []
+    for x in range(N):
+        string = input()
+        
+        if string[0:6] == 'insert':
+            tmp = string.split(" ")
+            position = int(tmp[1])
+            element  = int(tmp[2])
+            list.insert(position, element)
+        if string == 'print':
+            print(list)
+        if string[0:6] == 'remove':
+            element = string.split(" ")
+            list.remove(int(element[1]))
+        if string[0:6] == 'append':
+            tmp = string.split(" ")
+            element  = int(tmp[1])
+            list.append(element)
+        if string[0:4] == 'sort':
+            list.sort()
+        if string == 'pop':
+            list.pop()
+        if string == 'reverse':
+            list.reverse()
+
