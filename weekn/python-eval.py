@@ -1,0 +1,3 @@
+string = input()
+
+eval(string)
